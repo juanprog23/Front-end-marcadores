@@ -35,4 +35,26 @@ export class FavoritosComponent implements OnInit {
     );
   }
 
+  deleteFavorito(id){
+
+this._favoritoService.deleteFavorito(id).subscribe(
+      result => {
+        if(result){
+          alert('Deleted');
+          this.favoritos = this.getFavoritos();
+        }
+        else{
+          alert('Can\'nt delete marker');
+        }
+      },
+
+      error => {
+        if(error){
+          console.log(error);
+          alert('Error');
+        }
+      },
+    );
+  }
+
 }

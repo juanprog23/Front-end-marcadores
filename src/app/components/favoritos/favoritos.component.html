@@ -6,5 +6,8 @@
   <li *ngFor="let favorito of favoritos">
     <p>{{ favorito.title }}</p>
     <p><a [routerLink]="['/favorito', favorito._id]">See more</a></p>
+    <div  (click)="deleteFavorito(favorito._id)">
+      Borrar
+    </div>
   </li>
 </ul>
