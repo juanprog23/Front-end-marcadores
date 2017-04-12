@@ -1,0 +1,23 @@
+<p>
+  Marker:
+</p>
+
+<form #formFavorito="ngForm" (ngSubmit)="updateFavorito()">
+
+  <input type="text" name="title" [(ngModel)]="favorito.title" required [disabled]="editable == false">
+
+  <input type="text" name="description" [(ngModel)]="favorito.description" required [disabled]="editable == false">
+
+  <input type="url" name="url" [(ngModel)]="favorito.url" required [disabled]="editable == false">
+
+  <input type="submit" name="enviar" value="Guardar" [disabled]="editable == false">
+
+</form>
+
+<div class="col s6">
+  <button type="button" name="edit" (click)="deleteFavorito()" [disabled]="editable == false">Delete</button>
+</div>
+
+<div class="col s6">
+  <button type="button" name="edit" (click)="activeEditor()">Edit</button>
+</div>
