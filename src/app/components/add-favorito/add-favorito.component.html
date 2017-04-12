@@ -1,0 +1,15 @@
+<p>
+  add-favorito works!
+</p>
+
+<form #formFavorito="ngForm" (ngSubmit)="onSubmit()">
+
+  <input type="text" name="title" [(ngModel)]="favorito.title" placeholder="Titulo" required>
+
+  <input type="text" name="description" [(ngModel)]="favorito.description" placeholder="Descripción" required>
+
+  <input type="url" name="url" [(ngModel)]="favorito.url" placeholder="URL" required>
+
+  <input type="submit" name="envio" value="Guardar">
+
+</form>

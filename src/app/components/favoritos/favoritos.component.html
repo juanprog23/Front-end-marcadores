@@ -1,0 +1,10 @@
+<p>
+  favoritos works!
+</p>
+
+<ul>
+  <li *ngFor="let favorito of favoritos">
+    <p>{{ favorito.title }}</p>
+    <p><a [routerLink]="['/favorito', favorito._id]">See more</a></p>
+  </li>
+</ul>
