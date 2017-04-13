@@ -1,13 +1,32 @@
-<p>
-  favoritos works!
-</p>
+<h3 class="center">
+  Markers:
+</h3>
 
-<ul>
-  <li *ngFor="let favorito of favoritos">
-    <p>{{ favorito.title }}</p>
-    <p><a [routerLink]="['/favorito', favorito._id]">See more</a></p>
-    <div  (click)="deleteFavorito(favorito._id)">
-      Borrar
+
+<div class="row">
+
+  <div class="col s12 m6 l6" *ngFor="let favorito of favoritos">
+
+    <div class="card cyan darken-3 z-depth-5">
+
+      <div class="card-content blue-grey-text text-darken-4">
+
+        <span class="card-title orange-text text-darken-2"> {{ favorito.title }} </span>
+
+        <p> {{ favorito.description }} </p>
+
+      </div>
+
+      <div class="card-action">
+
+        <a class="waves-effect waves-light z-depth-3 btn" [routerLink]="['/favorito', favorito._id]">See more</a>
+
+        <a class="waves-effect waves-light red accent-2 z-depth-3 right btn" (click)="deleteFavorito(favorito._id)">Remove</a>
+
+      </div>
+
     </div>
-  </li>
-</ul>
+
+  </div>
+
+</div>
