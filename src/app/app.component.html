@@ -1,7 +1,11 @@
-<h1>
-  {{title}}
-</h1>
 
-<a [routerLink]="'addfavorito'">Add</a>
-
-<router-outlet></router-outlet>
+<nav>
+      <div class="nav-wrapper">
+        <a [routerLink]="['/']" class="brand-logo center">{{title}}</a>
+      </div>
+  </nav>
+  
+<div class="container">
+  <a [routerLink]="'addfavorito'">Add</a>
+  <router-outlet></router-outlet>
+</div>
