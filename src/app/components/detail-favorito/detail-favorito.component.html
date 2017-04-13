@@ -48,7 +48,7 @@
 
         <div class="col s12 m6 offset-m3" *ngIf="editable">
 
-          <input onclick="Materialize.toast('Updated', 4000)" type="submit" class="waves-effect waves btn" name="enviar" value="Guardar" [disabled]="editable == false">
+          <input onclick="Materialize.toast('Updated', 4000)" type="submit" class="waves-effect waves btn" name="enviar" value="Update" [disabled]="editable == false">
 
           <button onclick="Materialize.toast('Removed', 4000);" class="waves-effect waves-light right btn z-depth-3 red accent-2"type="button" name="delete" (click)="deleteFavorito()" [disabled]="editable == false">Remove</button>
 
