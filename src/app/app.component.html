@@ -1,19 +1,23 @@
 
-<nav>
-      <div class="nav-wrapper">
+<body class="lime lighten-5">
 
-        <a [routerLink]="['/']" class="brand-logo center">{{title}}</a>
+  <nav>
+        <div class="nav-wrapper nav-back">
 
-      </div>
-</nav>
+          <a [routerLink]="['/']" class="brand-logo red-text text-lighten-1 center">{{title}}</a>
+
+        </div>
+  </nav>
 
 
-  <div class="fixed-action-btn hide-on-small-only">
+    <div class="fixed-action-btn hide-on-small-only">
 
-    <a class="btn-floating btn-large waves-effect waves-light red" [routerLink]="'addfavorito'">+</a>
+      <a class="btn-floating btn-large waves-effect waves-light red" [routerLink]="'addfavorito'">+</a>
 
+    </div>
+
+  <div class="container">
+    <router-outlet></router-outlet>
   </div>
 
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
+</body>

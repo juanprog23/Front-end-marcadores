@@ -1,10 +1,10 @@
-<nav>
-  <div class="nav-wrapped">
+<nav class="titular-back">
+  <div class="nav-wrapped titular-back">
     <h4 class="center" > {{ title }} </h4>
   </div>
 </nav>
 
-<div [ngClass]="{'red lighten-4': !editable, 'teal lighten-5': editable}">
+<div [ngClass]="{'cyan lighten-4': editable, 'teal lighten-5': !editable}">
 
     <form #formFavorito="ngForm" (ngSubmit)="updateFavorito()" class="col s12">
 
