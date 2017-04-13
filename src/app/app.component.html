@@ -1,11 +1,19 @@
 
 <nav>
       <div class="nav-wrapper">
+
         <a [routerLink]="['/']" class="brand-logo center">{{title}}</a>
+
       </div>
-  </nav>
-  
+</nav>
+
+
+  <div class="fixed-action-btn">
+
+    <a class="btn-floating btn-large waves-effect waves-light red" [routerLink]="'addfavorito'">+</a>
+
+  </div>
+
 <div class="container">
-  <a [routerLink]="'addfavorito'">Add</a>
   <router-outlet></router-outlet>
 </div>
