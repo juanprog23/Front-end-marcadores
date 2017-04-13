@@ -2,7 +2,7 @@
 <nav>
   <div class="nav-wrapper">
     <div class="col s12">
-      <h4 class="blue-grey-text text-darken-4 center">Markers</h4>
+      <h2 class="blue-grey-text text-darken-4 center">Markers</h2>
     </div>
   </div>
 </nav>
@@ -25,7 +25,7 @@
 
         <a class="waves-effect waves-light z-depth-3 btn" [routerLink]="['/favorito', favorito._id]">See more</a>
 
-        <a class="waves-effect waves-light red accent-2 z-depth-3 right btn" (click)="deleteFavorito(favorito._id)">Remove</a>
+        <a onclick="Materialize.toast('Deleted', 4000);" class="waves-effect waves-light red accent-2 z-depth-3 right btn" (click)="deleteFavorito(favorito._id)">Remove</a>
 
       </div>
 
