@@ -11,13 +11,15 @@ import { FavoritoModel } from '../../models/FavoritoModel';
 })
 export class DetailFavoritoComponent implements OnInit {
 
-  favorito:any;
+  favorito: any;
   editable: boolean;
+  title: String;
 
   constructor(private _favoritoService : FavoritosService,
   private _router: Router,
   private _route: ActivatedRoute) {
     this.favorito = new FavoritoModel("","","","");
+    this.title = "Details";
   }
 
   ngOnInit() {
@@ -65,7 +67,7 @@ export class DetailFavoritoComponent implements OnInit {
 
         if(result.favoritoUpdated){
           this.getFavorito();
-          alert('Saved');
+          //alert('Saved');
           this.editable = false;
         } else{
           alert('Error during adding');
@@ -95,7 +97,7 @@ export class DetailFavoritoComponent implements OnInit {
       result => {
 
         if(result){
-          alert('Deleted!');
+          //alert('Deleted!');
           this._router.navigate(['/']);
         }else{
           alert('Error deleting')

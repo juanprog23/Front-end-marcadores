@@ -1,13 +1,36 @@
-<p>
-  favoritos works!
-</p>
 
-<ul>
-  <li *ngFor="let favorito of favoritos">
-    <p>{{ favorito.title }}</p>
-    <p><a [routerLink]="['/favorito', favorito._id]">See more</a></p>
-    <div  (click)="deleteFavorito(favorito._id)">
-      Borrar
+<nav>
+  <div class="nav-wrapper">
+    <div class="col s12">
+      <h2 class="titular-back white-text center">Markers</h2>
     </div>
-  </li>
-</ul>
+  </div>
+</nav>
+
+<div class="row">
+
+  <div class="col s12 m6 l6" *ngFor="let favorito of favoritos">
+
+    <div class="card card-back card-border z-depth-3 ">
+
+      <div class="card-content blue-grey-text text-darken-4">
+
+        <span class="card-title orange-text text-darken-2"> {{ favorito.title }} </span>
+
+        <p class="truncate"> {{ favorito.description }} </p>
+
+      </div>
+
+      <div class="card-action ">
+
+        <a class="waves-effect waves-light z-depth-3 hoverable btn" [routerLink]="['/favorito', favorito._id]">See more</a>
+
+        <a onclick="Materialize.toast('Deleted', 4000);" class="waves-effect waves-light red accent-2 z-depth-3 right hoverable btn" (click)="deleteFavorito(favorito._id)">Remove</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

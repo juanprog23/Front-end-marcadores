@@ -40,7 +40,7 @@ export class FavoritosComponent implements OnInit {
 this._favoritoService.deleteFavorito(id).subscribe(
       result => {
         if(result){
-          alert('Deleted');
+          //alert('Deleted');
           this.favoritos = this.getFavoritos();
         }
         else{

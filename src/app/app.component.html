@@ -1,7 +1,23 @@
-<h1>
-  {{title}}
-</h1>
 
-<a [routerLink]="'addfavorito'">Add</a>
+<body class="lime lighten-5">
 
-<router-outlet></router-outlet>
+  <nav>
+        <div class="nav-wrapper nav-back">
+
+          <a [routerLink]="['/']" class="brand-logo red-text text-lighten-1 center">{{title}}</a>
+
+        </div>
+  </nav>
+
+
+    <div class="fixed-action-btn hide-on-small-only">
+
+      <a class="btn-floating btn-large waves-effect waves-light red" [routerLink]="'addfavorito'">+</a>
+
+    </div>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+
+</body>
