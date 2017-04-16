@@ -11,9 +11,15 @@
 
   <div class="col s12 m6 l6" *ngFor="let favorito of favoritos">
 
+    <!-- Se genera un objeto que se repita cuantas veces como elementos existan -->
+    <!-- An object is created and will be repeated so many times as items in the list -->
+
     <div class="card card-back card-border z-depth-3 ">
 
       <div class="card-content blue-grey-text text-darken-4">
+
+        <!-- Se muestran el título y la descripción -->
+        <!-- Title and description are shown -->
 
         <span class="card-title orange-text text-darken-2"> {{ favorito.title }} </span>
 
@@ -22,6 +28,9 @@
       </div>
 
       <div class="card-action ">
+
+        <!-- Links para ver detalles o eliminar elemento -->
+        <!-- Links to see more details or delete items -->
 
         <a class="waves-effect waves-light z-depth-3 hoverable btn" [routerLink]="['/favorito', favorito._id]">See more</a>
 

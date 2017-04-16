@@ -4,6 +4,9 @@
   <nav>
         <div class="nav-wrapper nav-back">
 
+          <!-- El título es un link a la home page -->
+          <!-- Title is a link to the home page -->
+
           <a [routerLink]="['/']" class="brand-logo red-text text-lighten-1 center">{{title}}</a>
 
         </div>
@@ -12,11 +15,15 @@
 
     <div class="fixed-action-btn hide-on-small-only">
 
+      <!-- El boton Add se carga en esta vista para que su visualización sea independiente de el resto de los componentes -->
+      <!-- Add button is uploaded in this view in order to keep its visualization independient of the rest of the components -->
       <a class="btn-floating btn-large waves-effect waves-light red" [routerLink]="'addfavorito'">+</a>
 
     </div>
 
   <div class="container">
+
+    <!-- router-outlet carga los componentes mediante el enrutamiento -->
     <router-outlet></router-outlet>
   </div>
 

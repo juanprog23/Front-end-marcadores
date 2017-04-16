@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  //Título del componente
+  //Component's title
   title = 'Angular Mark Saver';
 }

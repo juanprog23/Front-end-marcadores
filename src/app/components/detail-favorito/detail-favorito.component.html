@@ -4,6 +4,12 @@
   </div>
 </nav>
 
+<!-- Simple formulario con estilos que envia informacion al componente usando data binding -->
+<!-- Simple form with styles that sends info to the component by using data binding -->
+
+<!-- Utilizan ngClasses para modificar la vista dependiendo de lo que el usuario quiera hacer -->
+<!-- Forms uses ngClasses for modifying the view depending on the user wants to do -->
+
 <div [ngClass]="{'cyan lighten-4': editable, 'teal lighten-5': !editable}">
 
     <form #formFavorito="ngForm" (ngSubmit)="updateFavorito()" class="col s12">
@@ -64,8 +70,14 @@
 </div>
 
 <div class="col s6 center" *ngIf="editable">
+
+  <!-- Si el usuario quiere editar o eliminar un elemento, tiene que utilizar el boton editar para desbloquear las acciones, se envia un toast -->
+  <!-- If users wants to edit or remove an item, has to use Edit button ir order tu unlock the actions, this launch an toast -->
   <button class="waves-effect waves-light btn" type="button" name="edit" (click)="activeEditor()" onclick="Materialize.toast('Edition: OFF', 4000)">Edit</button>
 </div>
+
+<!-- Este es un boton auxiliar, solo cambia el texto del toast -->
+<!-- THis second button is only an auxiliar, it changes the text in the toast -->
 
 <div class="col s6 center" *ngIf="!editable">
   <button class="waves-effect waves-light btn" type="button" name="edit" (click)="activeEditor()" onclick="Materialize.toast('Edition: ON', 4000)">Edit</button>
